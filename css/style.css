@@ -1,11 +1,20 @@
 * {
   box-sizing: border-box;
-  margin: 300;
-  padding: 600;
+  margin: 0;
+  padding: 0;
 }
 
 
-body {
-  min-height: 200vh;
-  width: 350%;      
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+@keyframes riseUp {
+   from { transform: translateY(200px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
