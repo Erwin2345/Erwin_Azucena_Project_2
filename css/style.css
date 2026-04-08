@@ -14,7 +14,52 @@ body, html {
     overflow-x: hidden;
 }
 
+#snowCanvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scene{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Scene 1: Blue Text*/
+.blue-text { color: #00d4ff; text-shadow: 0 0 10px rgba(0,212,255,0.5)}
+
+/* Scene 2: Mountain Rise */
+.yellow-text { color: #ffeb3b; }
+.mountain{
+  width: 0; height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150ps solid #555;
+  animation: riseUp 4s ease-out forwards;
+}
+
 @keyframes riseUp {
    from { transform: translateY(200px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+/* Scene 3: Hearts */
+.heart{ font-size: 5rem; color: #ff4d4d; margin: 20px; display: inline-block; }
+
+/* Scene 4: Spinning Loop */
+.spinning-wrap {
+  animation: spinAround 10s linear infinite;
+  max-width: 600px;
+}
+
+@keyframes spinAround {
+  from {transform: rotate(0degf); }
+  to {transform: rotate (360deg); }
 }
