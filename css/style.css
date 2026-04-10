@@ -33,21 +33,25 @@ body, html {
 }
 
 /* Scene 1: Blue Text*/
-.blue-text { color: #00d4ff; text-shadow: 0 0 10px rgba(0,212,255,0.5)}
+#sun { color: #266774; text-shadow: 0 0 10px rgba(0,212,255,0.5)
+
+
+
+}
 
 /* Scene 2: Mountain Rise */
-.yellow-text { color: #ffeb3b; }
-.mountain{
+#mountain{
   width: 0; height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 150ps solid #555;
-  animation: riseUp 4s ease-out forwards;
+  border-bottom: 100ps solid #00d9ff;
+  animation: riseUp 10s ease-out forwards;
+   color: #9ebff0; 
 }
 
 @keyframes riseUp {
 from { 
-    transform: translateY(200px); opacity: 0; 
+    transform: translateY(100px); opacity: 0; 
 }
 to { 
 transform: translateY(0); opacity: 1; 
@@ -55,19 +59,39 @@ transform: translateY(0); opacity: 1;
 }
 
 /* Scene 3: Hearts */
-.heart{ font-size: 5rem; color: #ff4d4d; margin: 20px; display: inline-block; }
-
-/* Scene 4: Spinning Loop */
-.spinning-wrap {
-  animation: spinAround 10s linear infinite;
-  max-width: 600px;
+#heart{ font-size: 5rem; color: #eb0000; margin: 20px; display: inline-block; 
+animation-duration: 5s;
+animation-fill-mode: forwards;
+animation-name: introAnimate;
+animation-timing-function: 25s ease-in-out;
 }
 
-@keyframes spinAround {
+@keyframes introAnimate {
+    from {
+        background-color: #333333;
+    }
+    to {
+        background-color: white;
+    }
+}
+
+/* Scene 4: Spinning Loop */
+#spinning-wrap {
+  animation: spinAround 20s linear infinite;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+  animation-timing-function: alternate;
+   text-align: left;
+}
+
+@keyframes rotate {
 from { 
+    margin-left: 150%;
     transform: rotate(0degf); 
 }
 to {
-transform: rotate (360deg); 
+     margin-left: 0%;
+    transform: rotate (720deg); 
     }
 }
