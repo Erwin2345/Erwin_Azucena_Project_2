@@ -32,26 +32,47 @@ body, html {
   position: relative;
 }
 
-/* Scene 1: Blue Text*/
-#sun { color: #266774; text-shadow: 0 0 10px rgba(0,212,255,0.5)
+/* Scene 1: Sun*/
+#sun { 
+    color: #266774; 
+    text-shadow: 0 0 10px rgba(0,212,255,0.5)
+  font-family 'Arial Black', sans-serif;
+  font-size: 8rem;
+  font-weight: 900;
+  position: relative;
+  /* Create a gradient that looks like a horizon */
+  background: linear-gradient(
+    to top, 
+    #ffcc33 0%,   /* Sun color */
+    #ff6600 25%,  /* Dawn orange */
+    #2c3e50 50%,  /* Horizon line */
+    #2c3e50 100%  /* Upper sky */
+  );
+  background-size: 100% 400%; /* Make gradient tall to animate position */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rise 5s ease-in-out infinite alternate;
+}
 
-
-
+@keyframes rise {
+  0% { background-position: 0% 100%; }   /* Start at the dark top */
+  100% { background-position: 0% 0%; }   /* Move sun color into the text */
 }
 
 /* Scene 2: Mountain Rise */
 #mountain{
-  width: 0; height: 0;
-  border-left: 100px solid transparent;
+  font-size: 5rem
+  border-left 100px solid transparent;
   border-right: 100px solid transparent;
   border-bottom: 100ps solid #00d9ff;
-  animation: riseUp 10s ease-out forwards;
+  animation: riseUp 5s ease-out forwards;
    color: #9ebff0; 
 }
 
 @keyframes riseUp {
 from { 
-    transform: translateY(100px); opacity: 0; 
+    transform: translateY(200px); opacity: 0; 
 }
 to { 
 transform: translateY(0); opacity: 1; 
@@ -59,7 +80,11 @@ transform: translateY(0); opacity: 1;
 }
 
 /* Scene 3: Hearts */
-#heart{ font-size: 5rem; color: #eb0000; margin: 20px; display: inline-block; 
+#heart{ 
+font-size: 5rem; 
+color: #eb0000; 
+margin: 20px; 
+display: inline-block; 
 animation-duration: 5s;
 animation-fill-mode: forwards;
 animation-name: introAnimate;
