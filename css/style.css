@@ -40,15 +40,14 @@ body, html {
   font-size: 8rem;
   font-weight: 900;
   position: relative;
-  /* Create a gradient that looks like a horizon */
   background: linear-gradient(
     to top, 
-    #ffcc33 0%,   /* Sun color */
-    #ff6600 25%,  /* Dawn orange */
-    #2c3e50 50%,  /* Horizon line */
-    #2c3e50 100%  /* Upper sky */
+    #ffcc33 0%,
+    #ff6600 25%,
+    #2c3e50 50%, 
+    #2c3e50 100% 
   );
-  background-size: 100% 400%; /* Make gradient tall to animate position */
+  background-size: 100% 400%; 
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -56,18 +55,18 @@ body, html {
 }
 
 @keyframes rise {
-  0% { background-position: 0% 100%; }   /* Start at the dark top */
-  100% { background-position: 0% 0%; }   /* Move sun color into the text */
+  0% { background-position: 0% 100%; } 
+  100% { background-position: 0% 0%; } 
 }
 
 /* Scene 2: Mountain Rise */
 #mountain{
-  font-size: 5rem
-  border-left 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100ps solid #00d9ff;
-  animation: riseUp 5s ease-out forwards;
-   color: #9ebff0; 
+  font-size: 5rem;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 200px solid transparent;
+  animation: riseUp 20s ease-out forwards;
+  color: #9ebff0; 
 }
 
 @keyframes riseUp {
@@ -83,13 +82,25 @@ transform: translateY(0); opacity: 1;
 #heart{ 
 font-size: 5rem; 
 color: #eb0000; 
-margin: 20px; 
+margin: 200px; 
 display: inline-block; 
 animation-duration: 5s;
 animation-fill-mode: forwards;
 animation-name: introAnimate;
 animation-timing-function: 25s ease-in-out;
 }
+
+#snowfall{
+font-size: 5rem; 
+color: #ffffff; 
+margin: 190px; 
+display: inline-block; 
+animation-duration: 5s;
+animation-fill-mode: forwards;
+animation-name: introAnimate;
+animation-timing-function: 25s ease-in-out;
+}
+
 
 @keyframes introAnimate {
     from {
