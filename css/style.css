@@ -33,13 +33,13 @@ body, html {
 }
 
 /* Scene 1: Sun*/
-#sun { 
-    color: #266774; 
-    text-shadow: 0 0 10px rgba(0,212,255,0.5)
-  font-family 'Arial Black', sans-serif;
+#sun {
+  color:#266774;
+  text-shadow: 0 0 10px rgba(0,212,255,0.5);
+  font-family: 'Arial Black', sans-serif;
   font-size: 8rem;
   font-weight: 900;
-  position: relative;
+  position:relative;
   background: linear-gradient(
     to top, 
     #ffcc33 0%,
@@ -47,7 +47,7 @@ body, html {
     #2c3e50 50%, 
     #2c3e50 100% 
   );
-  background-size: 100% 400%; 
+  background-size: 100% 400%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -82,7 +82,7 @@ transform: translateY(0); opacity: 1;
 #heart{ 
 font-size: 5rem; 
 color: #eb0000; 
-margin: 200px; 
+margin: 10px; 
 display: inline-block; 
 animation-duration: 5s;
 animation-fill-mode: forwards;
@@ -128,6 +128,6 @@ from {
 }
 to {
      margin-left: 0%;
-    transform: rotate (720deg); 
+    transform: rotate(720deg); 
     }
 }
