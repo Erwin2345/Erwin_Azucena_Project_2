@@ -8,7 +8,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: #1a1a1a;
+    background: #4f80a5;
     color: white;
     font-family: 'Segoe UI', sans-serif;
     overflow-x: hidden;
@@ -54,6 +54,12 @@ body, html {
   animation: rise 5s ease-in-out infinite alternate;
 }
 
+#scene1{
+background: linear-gradient(to bottom, #ffeb3b 0%, #ffffff 100%);
+overflow: hidden;
+height: 100vh;
+}
+
 @keyframes rise {
   0% { background-position: 0% 100%; } 
   100% { background-position: 0% 0%; } 
@@ -64,31 +70,27 @@ body, html {
   font-size: 5rem;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-top: 200px solid transparent;
+  border-top: 10px solid transparent;
   animation: riseUp 20s ease-out forwards;
+  animation-iteration-count: infinite;
   color: #9ebff0; 
+  margin-top: 1%;
+}
+
+#scene3{
+  background-color: white;
 }
 
 @keyframes riseUp {
 from { 
-    transform: translateY(200px); opacity: 0; 
+    transform: translateY(500px); opacity: 0; 
 }
 to { 
-transform: translateY(0); opacity: 1; 
+transform: translateY(10px); opacity: 1; 
     }
 }
 
-/* Scene 3: Hearts */
-#heart{ 
-font-size: 5rem; 
-color: #eb0000; 
-margin: 10px; 
-display: inline-block; 
-animation-duration: 5s;
-animation-fill-mode: forwards;
-animation-name: introAnimate;
-animation-timing-function: 25s ease-in-out;
-}
+/* Scene 3: Snowfall */
 
 #snowfall{
 font-size: 5rem; 
@@ -99,6 +101,8 @@ animation-duration: 5s;
 animation-fill-mode: forwards;
 animation-name: introAnimate;
 animation-timing-function: 25s ease-in-out;
+animation-iteration-count: infinite;
+background-size: 150% 400%;
 }
 
 
@@ -113,12 +117,12 @@ animation-timing-function: 25s ease-in-out;
 
 /* Scene 4: Spinning Loop */
 #spinning-wrap {
-  animation: spinAround 20s linear infinite;
+  animation: spinAround 10s linear infinite;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-name: rotate;
   animation-timing-function: alternate;
-   text-align: left;
+   color: green;
 }
 
 @keyframes rotate {
